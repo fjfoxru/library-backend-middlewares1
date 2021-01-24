@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const fileMiddleware = require('../middleware/file');
 const {Book} = require('../models');
-
 
 const stor = {
     books: [],
@@ -28,12 +28,13 @@ router.get('/:id', (request, responce) => {
     }
 });
 
-router.post('/', (request, responce) => {
-    const {title, description} = request.body;
-    const newBook = new Book(title, description);
-    books.push(newBook);
-    responce.status(201);
-    responce.json(newBook);
+router.post('/', fileMiddleware.single('fileBook'), (request, responce) => {
+        const {fileBook} = request.file;
+        const {title, description} = request.body;
+        const newBook = new Book(title, description, fileBook);
+        books.push(newBook);
+        responce.status(201);
+        responce.json(newBook);
 });
 
 router.put('/:id', (request, responce) => {
@@ -71,7 +72,6 @@ router.post('/api/books/:id/upload', fileMiddleware.single('cover'), (request, r
     console.log('111');
     if (request.file) {
         const {path} = request.file;
-        
         responce.json(path);
     } else {
         responce.json(null);

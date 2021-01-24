@@ -13,13 +13,11 @@ const userRouter = require('./routes/user');
 
 const app = express();
 
-
 app.use(formData.parse());
 app.use(cors());
 app.use(loggerMiddleware);
-app.use(fileMiddleware);
 
-app.use('/files', express.static(__dirname+'/public'));
+app.use('/public', express.static(__dirname+'/public'));
 
 app.use('/', indexRouter);
 app.use('/api/books', booksRouter);
