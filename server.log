@@ -69,3 +69,30 @@
 7:37:8 GET: / user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
 7:39:6 GET: / user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
 7:39:8 GET: / user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+19:43:51 GET: /api/books user-agent: PostmanRuntime/7.26.10
+19:49:47 GET: /books user-agent: PostmanRuntime/7.26.10
+19:49:56 GET: /book user-agent: PostmanRuntime/7.26.10
+19:50:11 GET: /books user-agent: PostmanRuntime/7.26.10
+19:50:20 GET: /api/books user-agent: PostmanRuntime/7.26.10
+19:51:58 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:54:37 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:54:51 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:57:38 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:58:45 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:59:5 POST: /api/books user-agent: PostmanRuntime/7.26.10
+19:59:22 POST: /api/books user-agent: PostmanRuntime/7.26.10
+20:1:1 GET: /api/books user-agent: PostmanRuntime/7.26.10
+20:2:4 PUT: /api/books/161168043419715642710031509579 user-agent: PostmanRuntime/7.26.10
+20:3:24 GET: /api/books user-agent: PostmanRuntime/7.26.10
+20:3:37 GET: /api/books/1611680601969925223800f08f447d user-agent: PostmanRuntime/7.26.10
+20:3:54 PUT: /api/books/1611680601969925223800f08f447d user-agent: PostmanRuntime/7.26.10
+20:7:14 GET: /api/books/1611680601969925223800f08f447d user-agent: PostmanRuntime/7.26.10
+20:7:18 GET: /api/books/ user-agent: PostmanRuntime/7.26.10
+20:7:24 GET: /api/books/1611680825312269796000e71314f0 user-agent: PostmanRuntime/7.26.10
+20:8:14 PUT: /api/books/1611680825312269796000e71314f0 user-agent: PostmanRuntime/7.26.10
+20:8:25 PUT: /api/books/ user-agent: PostmanRuntime/7.26.10
+20:8:33 GET: /api/books/ user-agent: PostmanRuntime/7.26.10
+20:9:17 GET: /api/books/ user-agent: PostmanRuntime/7.26.10
+20:9:30 GET: /api/books/1611680952539493008500e7f77349 user-agent: PostmanRuntime/7.26.10
+20:9:39 PUT: /api/books/1611680952539493008500e7f77349 user-agent: PostmanRuntime/7.26.10
+20:9:54 GET: /api/books/ user-agent: PostmanRuntime/7.26.10

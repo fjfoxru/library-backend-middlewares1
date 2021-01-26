@@ -29,25 +29,25 @@ router.get('/:id', (request, responce) => {
 });
 
 router.post('/', fileMiddleware.single('fileBook'), (request, responce) => {
-        const {fileBook} = request.file;
+        const {path} = request.file;
         const {title, description} = request.body;
-        const newBook = new Book(title, description, fileBook);
+        const newBook = new Book(title, description, path);
         books.push(newBook);
         responce.status(201);
         responce.json(newBook);
 });
 
 router.put('/:id', fileMiddleware.single('fileBook'), (request, responce) => {
-    const {fileBook} = request.file;
+    const {path} = request.file;
     const {id} = request.params;
     const {title, description} = request.body;
     const reqBook = books.findIndex(book => book.id === id);
     if (reqBook !== -1) {
-        books[reqBook] === {
-            ...reqBook,
+        books[reqBook] = {
+            ...books[reqBook],
             title,
             description,
-            fileBook
+            path
         }
         responce.json(reqBook);
     } else {
