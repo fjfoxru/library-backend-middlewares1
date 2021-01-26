@@ -37,7 +37,8 @@ router.post('/', fileMiddleware.single('fileBook'), (request, responce) => {
         responce.json(newBook);
 });
 
-router.put('/:id', (request, responce) => {
+router.put('/:id', fileMiddleware.single('fileBook'), (request, responce) => {
+    const {fileBook} = request.file;
     const {id} = request.params;
     const {title, description} = request.body;
     const reqBook = books.findIndex(book => book.id === id);
@@ -45,7 +46,8 @@ router.put('/:id', (request, responce) => {
         books[reqBook] === {
             ...reqBook,
             title,
-            description
+            description,
+            fileBook
         }
         responce.json(reqBook);
     } else {

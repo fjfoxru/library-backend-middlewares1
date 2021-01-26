@@ -1,5 +1,5 @@
 const express = require('express');
-const formData = require("express-form-data");
+const bodyParser = require('body-parser')
 const cors = require('cors');
 
 
@@ -13,7 +13,7 @@ const userRouter = require('./routes/user');
 
 const app = express();
 
-app.use(formData.parse());
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 app.use(loggerMiddleware);
 
